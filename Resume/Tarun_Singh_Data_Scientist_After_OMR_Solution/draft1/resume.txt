@@ -1,0 +1,209 @@
+\documentclass[letterpaper,10pt]{article}
+\usepackage{xcolor}
+\usepackage{tcolorbox}
+\usepackage[empty]{fullpage}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+
+%--------------font---------------------------------
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\usepackage[left=0.2in,top=0.4in,right=0.2in,bottom=0.3in]{geometry}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{\vspace{-2pt}\scshape\raggedright\large\bfseries}{}{0em}{}[\color{black}\titlerule\vspace{-3pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+% ------------------ changes for skill section ----------------
+% Define the skill box
+\newtcbox{\skillbox}[1][]{
+  on line,
+  colframe=black,
+  size=small,
+  boxrule=0.2pt,
+  arc= 3pt,
+  outer arc=3pt,
+  colupper=black,
+  boxsep=2pt,
+  left=4pt,
+  right=4pt,
+  top=2pt,
+  bottom=2pt,
+  #1
+}
+
+
+% Set link color to dark blue
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=blue
+}
+
+% Custom commands
+\newcommand{\resumeItem}[1]{\item\small{#1 \vspace{-2pt}}}
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & \textbf{\small #2} \\
+    \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+\newcommand{\resumeSubSubheading}[2]{
+  \item
+  \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+    \textit{\small#1} & \textit{\small #2} \\
+  \end{tabular*}\vspace{-7pt}
+}
+\newcommand{\resumeProjectHeading}[2]{
+  \item
+  \begin{tabular*}{1.0\textwidth}{l@{\extracolsep{\fill}}r}
+    \small#1 & \textbf{\small #2}\\
+  \end{tabular*}\vspace{-4pt}
+}
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    {\Huge \scshape Tarun Singh} 
+    \\ \vspace{1pt}
+    Agra, Uttar Pradesh \\
+    \vspace{1pt}
+    \small \raisebox{-0.1\height}\faPhone\ +91 9305685721 ~ \href{Tarun2002.Ts02@gmail.com}{\raisebox{-0.2\height}\faEnvelope\  tarun2002.ts02@gmail.com} ~
+    \href{https://www.linkedin.com/in/tarun-singh-in/}{\raisebox{-0.2\height}\faLinkedin\ linkedin.com/in/tarun-singh-in}
+\end{center}
+
+%-----------EXPERIENCE-----------
+\section{Work Experience}
+\resumeSubHeadingListStart
+    \resumeSubheading
+    {OMR India Outsources Pvt Ltd}{March 2025 -- Present}
+    {Data Scientist}{Agra, India}
+    \resumeItemListStart
+        \resumeItem{Developed a \textbf{deep-learning} model to auto-generate multiple-choice questions from video content, driving a \textbf{15\%} uplift in learner engagement.}
+        \resumeItem{Designed and deployed a personalized \textbf{movie-recommendation engine} for the \textbf{Reeloid app}, reducing user churn by \textbf{12\%} and boosting average daily watch time by \textbf{35\%}.}
+        \resumeItem{Engineered an \textbf{AI-powered OMR sheet scanner} to digitize candidate details and answers from any sheet format, cutting processing costs by \textbf{45\%} and accelerating data capture speed by \textbf{55\%}.}
+        \resumeItem{Architected and delivered \textbf{60+} new RESTful APIs using \textbf{FastAPI} and \textbf{MongoDB}—while optimizing \textbf{100+} existing endpoints—to achieve a \textbf{50\%} improvement in per-API response times and a \textbf{25\%} faster overall application performance.}
+    \resumeItemListEnd
+
+    \resumeSubheading
+    {Paytm}{June 2023 -- February 2024}
+    {Quality Assurance Engineer}{Bangalore, India}
+    \resumeItemListStart
+        \resumeItem{Automated \textbf{100+} test cases using Java and IntelliJ, leading to a \textbf{30\%} reduction in manual testing efforts and boosting test coverage by \textbf{15\%}.}
+        \resumeItem{Developed and maintained robust test suites, resulting in a \textbf{40\%} reduction in production defects and a \textbf{25\%} increase in product stability.}
+        \resumeItem{Conducted regression testing on code updates and patches to ensure backward compatibility and stability, reducing regression bugs by \textbf{30\%}.}
+        \resumeItem{Collaborated with cross-functional teams to develop test plans and strategies, resulting in a \textbf{29\%} reduction in time spent on test case execution and development.}
+    \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+\resumeSubHeadingListStart
+    \resumeProjectHeading
+        {\textbf{Bollywood Song Recommendation System} $|$ \href{https://lp0b66aa4h.execute-api.us-east-1.amazonaws.com/Prod/}{Website Link}  $|$ \href{https://github.com/TarunSingh2002/Bollywood-song-recommendation-system}{Source Code}}{Machine Learning Application}
+        \resumeItemListStart
+            \resumeItem{Developed a recommendation engine by scraping \textbf{Spotify API} data and training \textbf{ML} models to suggest similar tracks based on user selection.}
+            \resumeItem{Containerized a \textbf{Flask} web interface with \textbf{Docker} and exposed RESTful endpoints for seamless interaction with the recommendation engine.}
+            \resumeItem{Deployed serverless backend on \textbf{AWS Lambda} behind \textbf{API Gateway}, ensuring auto-scaling, fault tolerance, and minimal infra management.}
+            \resumeItem{\textbf{Tech used:} \textbf{Scikit-learn, Flask, Docker, AWS Lambda, API Gateway, DVC.}}
+        \resumeItemListEnd
+
+    \resumeProjectHeading
+        {\textbf{Youtube Comments Sentiment Analysis} $|$ \href{https://tarun-singh-youtube-video-comments-sentiment-analysis.hf.space/}{Website Link} $|$ \href{https://github.com/TarunSingh2002/Youtube-Comments-Sentiment-Analysis}{Source Code}}{Deep Learning Application}
+        \resumeItemListStart
+            \resumeItem{Engineered a YouTube sentiment analyzer: fine-tuned \textbf{MobileBERT} for 6-emotion classification and used \textbf{YouTube API} for comment retrieval.}
+            \resumeItem{Accelerated inference by converting to \textbf{TensorFlow Lite} with \textbf{Float16 quantization} and serving via a Flask web app containerized in \textbf{Docker}.}
+            \resumeItem{Hosted the Flask-based analyzer on \textbf{Hugging Face Spaces}, ensuring a scalable, user-friendly experience.}
+            \resumeItem{\textbf{Tech used:} \textbf{Transformer, NLP, TensorFlow, Flask, Docker, Hugging Face, DVC.}}
+        \resumeItemListEnd
+    
+    \resumeProjectHeading
+        {\textbf{Harry Potter In Depth Query Bot} $|$ \href{https://glmhyiev9c.execute-api.us-east-1.amazonaws.com/Prod/}{Website Link} $|$ \href{https://github.com/TarunSingh2002/Harry-Potter-In-Depth-Query-Bot}{Source Code}}{Generative AI Application}
+        \resumeItemListStart
+            \resumeItem{Developed a Harry Potter query bot using \textbf{LLMs} and \textbf{RAG} to deliver precise, context-aware answers about the series.}
+            \resumeItem{Leveraged \textbf{LangChain} framework to integrate the LLM, RAG pipeline, and a \textbf{Chroma vector database} built from the Harry Potter texts.}
+            \resumeItem{Deployed a \textbf{Flask} interface containerized with \textbf{Docker} and scaled serverless via \textbf{AWS Lambda} behind \textbf{API Gateway} for robust execution.}
+            \resumeItem{\textbf{Tech used:} \textbf{GPT 4o-mini, LangChain, Chroma, LLM, RAG, Docker, AWS Lambda, API Gateway, Flask, DVC.}}
+        \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+% %----------- SKILLS-----------
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.1in, label={}]
+    \small{\item{
+    \skillbox{Machine Learning} \skillbox{Deep Learning} 
+    \skillbox{Artificial Intelligence} \skillbox{NLP} 
+    \skillbox{Data Analysis} \skillbox{Data Science} 
+    \skillbox{RAG} \skillbox{Generative AI} \skillbox{NumPy}
+    \skillbox{TensorFlow}  \skillbox{Pandas} 
+    \skillbox{MongoDB} \skillbox{Statistical Analysis} \skillbox{SQL} 
+    \skillbox{LangChain} \skillbox{AWS} \skillbox{Docker} 
+   \skillbox{Git} \skillbox{MLOps} \skillbox{Python} \skillbox{FastAPI}
+    }}
+\end{itemize}
+
+%-----------Internships and Achievements-----------
+\section{Internships and Achievements}
+\begin{itemize}
+\resumeItem{\textbf{Getting Started with Enterprise Data Science, IBM –} Certified by IBM for mastering core data science concepts, tools, and team roles.} 
+\resumeItem{\textbf{Quality Assurance Engineer Intern, Paytm –} Performed quality assurance testing for web and mobile applications.} 
+\resumeItem{Completed \textbf{1000+} data structures and algorithm problems on \textbf{GeeksforGeeks and Leetcode} combined.}
+\end{itemize}
+
+%-----------PROFILE LINKS-----------
+\section{Profile Links}
+\href{https://github.com/TarunSingh2002}{Github}, 
+\href{https://www.kaggle.com/tarunsingh2002}{Kaggle},
+\href{https://huggingface.co/Tarun-singh}{Hugging Face},
+\href{https://auth.geeksforgeeks.org/user/tarun_singh_}{GeeksforGeeks},
+\href{https://leetcode.com/user5548h/}{Leetcode}
+
+%-----------EDUCATION-----------
+\section{Education}
+\resumeSubHeadingListStart
+    \resumeSubheading
+    {Dr. A.P.J. Abdul Kalam Technical University}{August 2019 - June 2023}
+    {Bachelor of Technology in Computer Science Engineering}{Uttar Pradesh, India}
+\resumeSubHeadingListEnd
+\end{document}
