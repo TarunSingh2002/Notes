@@ -190,11 +190,15 @@
 \begin{itemize}[leftmargin=0in, label={}]
 \small{\item{
 
-\textbf{Languages \& Libraries} {: Python, C++, TensorFlow, PyTorch, Scikit-Learn,  NumPy, Pandas, LangChain, FastAPI} \vspace{2pt} \\
+% \textbf{Machine Learning \& AI} {: Machine Learning, Deep Learning, NLP, Large Language Models (LLMs), RAG, Generative AI} \vspace{2pt} \\
+
+\textbf{Languages \& Libraries} {: Python, C++, TensorFlow, PyTorch, Scikit-Learn, NumPy, Pandas, LangChain, FastAPI} \vspace{2pt} \\
+
 
 \textbf{Tools} {: AWS, Docker, SQL, MongoDB, DVC, MLflow, Apache Kafka, Git / GitHub}
 }}
 \end{itemize}
+
 
 %-----------EDUCATION-----------
 \section {EDUCATION}
