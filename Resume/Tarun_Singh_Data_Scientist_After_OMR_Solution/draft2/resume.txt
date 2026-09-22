@@ -1,0 +1,209 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+
+% fontawesome
+\usepackage{fontawesome5}
+
+% fixed width
+\usepackage[scale=0.90,lf]{FiraMono}
+
+% light-grey
+\definecolor{light-grey}{gray}{0.83}
+\definecolor{dark-grey}{gray}{0.3}
+\definecolor{text-grey}{gray}{.08}
+
+\DeclareRobustCommand{\ebseries}{\fontseries{eb}\selectfont}
+\DeclareTextFontCommand{\texteb}{\ebseries}
+
+% custom underline
+\usepackage{contour}
+\usepackage[normalem]{ulem}
+\renewcommand{\ULdepth}{1.8pt}
+\contourlength{0.8pt}
+\newcommand{\myuline}[1]{%
+  \uline{\phantom{#1}}%
+  \llap{\contour{white}{#1}}%
+}
+
+% custom font: helvetica-style
+\usepackage{tgheros}
+\renewcommand*\familydefault{\sfdefault} 
+\usepackage[T1]{fontenc}
+
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.70in}
+\addtolength{\evensidemargin}{-0.70in}
+\addtolength{\textwidth}{1.40in}
+\addtolength{\topmargin}{-.65in}
+\addtolength{\textheight}{1.3in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat {\section}{
+    \bfseries \vspace{2pt} \raggedright \large
+}{}{0em}{}[\color{light-grey} {\titlerule[2pt]} \vspace{-4pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-1pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & {\color{dark-grey}\small #2}\vspace{1pt}\\
+      \textit{#3} & {\color{dark-grey} \small #4}\\
+    \end{tabular*}\vspace{-4pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+      #1 & {\color{dark-grey}} \\
+    \end{tabular*}\vspace{-4pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[topsep=0pt,itemsep=-1pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-2pt}}
+
+\color{text-grey}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge Tarun Singh} \\ \vspace{5pt}
+    \small \faPhone* \texttt{+91 9305685721} \hspace{1pt} $|$
+    \hspace{1pt} \href{mailto:tarun2002.ts02@gmail.com}{\faEnvelope\ \texttt{tarun2002.ts02@gmail.com}} \hspace{1pt} $|$ 
+    \hspace{1pt} \href{https://www.linkedin.com/in/tarun-singh-in/}{\faLinkedin\ \texttt{tarun-singh-in}} \hspace{1pt} $|$
+    \hspace{1pt} \href{https://github.com/TarunSingh2002}{\faGithub\ \texttt{TarunSingh2002}}
+    \\ \vspace{-3pt}
+\end{center}
+
+%-----------EXPERIENCE-----------
+\section{EXPERIENCE}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Data Scientist}{March 2025 -- Present}
+      {OMR India Outsources Pvt Ltd}{Bengaluru, India}
+      \resumeItemListStart        
+        \resumeItem{Fine-tuned and deployed a lightweight LLM for movie script summarization and genre classification, improving genre-classification accuracy by \textbf{30\%} over the base model and cutting manual script review time by about a third.}
+        \resumeItem{Built a movie recommendation system for Reeloid using movie-category embeddings and cosine similarity, increasing clicks on recommended titles by \textbf{20\%} and lengthening average user sessions.}
+        \resumeItem{Built a LangChain-based LLM solution to convert video content into quizzes by processing video → audio → transcript → questions, cutting manual question-creation effort by \textbf{40\%}.}
+        \resumeItem{Developed \textbf{60+} REST APIs for the Reeloid application using FastAPI and MongoDB, and optimized \textbf{100+} existing endpoints, cutting average API response time by \textbf{50\%}.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {AI/ML Career Transition \& Upskilling}{February 2024 -- February 2025}
+      {Self-Directed Study \& Project Development}{}
+      \resumeItemListStart
+        \resumeItem{Completed focused upskilling in Machine Learning, Deep Learning, NLP, and Generative AI through structured study and project development.}
+        \resumeItem{Built and deployed 3 end-to-end AI/ML projects spanning RAG pipelines, transformer fine-tuning, and recommendation systems.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Quality Assurance Engineer}{June 2023 -- February 2024}
+      {Paytm}{Delhi, India}
+      \resumeItemListStart
+        \resumeItem{Implemented and automated \textbf{100+} end-to-end test cases in Java within IntelliJ IDEA, integrating suites into the CI pipeline to reduce manual testing and speed up release verification by \textbf{20\%}.}
+        \resumeItem{Designed and refactored a modular, data-driven test framework, improving test reusability and reducing flaky failures by \textbf{35\%}, which helped catch more defects in critical user flows before release.}
+        \resumeItem{Led cross-functional testing sprints with Product and Engineering to define acceptance criteria and risk-based test plans, decreasing test-case development and execution time by \textbf{29\%} and shortening bug-to-fix cycles.}
+        \resumeItem{Conducted automated regression and backward-compatibility testing for weekly releases and introduced selective regression runs, reducing regression escapes (bugs reaching production) by \textbf{30\%}.}
+    \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------
+\section{PROJECTS}
+    \resumeSubHeadingListStart
+          \resumeProjectHeading
+        {\textbf{YouTube Comments Sentiment Analysis} $|$ \href{https://github.com/TarunSingh2002/Youtube-Comments-Sentiment-Analysis}{Source Code}}{Deep Learning Application}
+        \resumeItemListStart 
+            \resumeItem{Developed a YouTube comment sentiment analyzer by fine-tuning MobileBERT on the DAIR-AI Emotion dataset (16K labeled samples) to classify comments into six emotions, reaching \textbf{91.9\%} accuracy on a 2K-sample held-out test set.}
+            \resumeItem{Optimized inference with TensorFlow Lite Float16 quantization, halving model size while keeping \textbf{91.1\%} test accuracy.}
+            \resumeItem{\textbf{Tech used:} Deep Learning, MobileBERT, Transformers, NLP, TensorFlow, TensorFlow Lite, Quantization, YouTube API.}
+        \resumeItemListEnd
+
+        \resumeProjectHeading
+        {\textbf{Harry Potter In Depth Query Bot} $|$ \href{https://github.com/TarunSingh2002/Harry-Potter-In-Depth-Query-Bot}{Source Code}}{Generative AI Application}
+        \resumeItemListStart
+            \resumeItem{Built a Harry Potter query bot using LangChain RAG with Chroma vector search over all seven books (\textbf{1M+} words).}
+            \resumeItem{Implemented embeddings and prompt templates to reduce hallucinations; deployed serverless on AWS Lambda.}
+            \resumeItem{\textbf{Tech used:} Generative AI, GPT-4o-mini, LangChain, Chroma, RAG, Embeddings, Prompt Engineering, Flask, Docker}
+        \resumeItemListEnd
+
+        \resumeProjectHeading
+        {\textbf{Bollywood Song Recommendation System} $|$ \href{https://github.com/TarunSingh2002/Bollywood-song-recommendation-system}{Source Code}}{Machine Learning Application}
+        \resumeItemListStart
+            \resumeItem{Built a Bollywood song recommender using Spotify metadata and cosine similarity across a \textbf{1,445}-song catalog.}
+            \resumeItem{\textbf{Tech used:} Machine Learning, Python, Scikit-learn, Flask, Docker, DVC, Git.}
+        \resumeItemListEnd
+
+    \resumeSubHeadingListEnd
+
+
+
+\section{SKILLS}
+\begin{itemize}[leftmargin=0in, label={}]
+\small{\item{
+\textbf{Languages \& Libraries} {: Python, TensorFlow, PyTorch, Scikit-Learn, Hugging Face, TRL, LoRA, QLoRA, PEFT, NumPy, Pandas} \vspace{2pt} \\
+\textbf{Tools} {: AWS, Docker, DVC, MLflow, ONNX, MLOps, Git / GitHub, Pruning, Knowledge Distillation, Edge Deployment}
+}}
+\end{itemize}
+
+
+
+%-----------EDUCATION-----------
+\section {EDUCATION}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Dr. A.P.J. Abdul Kalam Technical University}{August 2019 - June 2023}
+      {Bachelor of Technology in Computer Science and Engineering}{Uttar Pradesh, India}
+  \resumeSubHeadingListEnd
+
+%-------------------------------------------
+\end{document}
